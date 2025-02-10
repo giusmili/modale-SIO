@@ -1,44 +1,32 @@
-document.addEventListener("DOMContentLoaded",(e)=>{
-    e.preventDefault()
-    console.log(e.target)
+import { modale } from "./modele.js";
 
-    const elementParent = document.querySelector(".modal-parent") // parent modale
+document.addEventListener("DOMContentLoaded", (e) => {
+  e.preventDefault();
+  console.log(e.target);
 
-    const btn_open = document.querySelector("h1 a"); // le link open
+  /* object js */
 
-    const btn_closed = document.querySelector(".btn-closed")
+  modale.btn_open.addEventListener("click", (e) => {
+    e.stopPropagation();
+    modale.elementParent.classList.add("appear-modal");
+  });
 
-    const closed = document.querySelector(".closed")
+  modale.btn_closed.addEventListener("click", (e) => {
+    e.stopPropagation();
+    modale.elementParent.classList.remove("appear-modal");
+  });
 
-    const elementFigure = document.querySelector("figure")
-    
+  modale.closed.addEventListener("click", (e) => {
+    e.stopPropagation();
+    modale.elementParent.classList.remove("appear-modal");
+  });
 
+  /* pas de fermeture sur figure */
+  modale.elementFigure.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
 
-    btn_open.addEventListener("click",(e)=>{
-        e.stopPropagation()
-        elementParent.classList.add("appear-modal")
-
-    
-    })
-
-    btn_closed.addEventListener("click",(e)=>{
-        e.stopPropagation()
-        elementParent.classList.remove("appear-modal")
-    })
-
-    closed.addEventListener("click",(e)=>{
-        e.stopPropagation()
-        elementParent.classList.remove("appear-modal")
-    })
-
-    /* pas de fermeture sur figure */
-    elementFigure.addEventListener("click",(e)=>{
-        e.stopPropagation()
-    })
-
-    document.addEventListener("click",()=>{
-        elementParent.classList.remove("appear-modal") /* click exterieur */
-    })
-
-
-})
+  document.addEventListener("click", () => {
+    modale.elementParent.classList.remove("appear-modal"); /* click exterieur */
+  });
+});
