@@ -28,7 +28,7 @@ header{
     left: 0;
     height: 100svh;
     width:  100svw;
-    background-color: rgba(111, 8, 8, 0.6);
+    background-color: rgba(111, 8, 8, 0.6); 
     z-index: -1; /* -1 */
    /*  backdrop-filter: blur(.3rem); */
     opacity: 0;

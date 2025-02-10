@@ -2,6 +2,7 @@
 html{
     font-size: 62.5%; /* 16 mult 62.5% = 10rem */
     background: #222 url(../asset/montage.jpg)no-repeat fixed center center / cover;
+   
 }
 
 body{
