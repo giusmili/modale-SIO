@@ -1,6 +1,7 @@
 # 🚀 Fenêtre modales : dialog
 
 >Le sujet traité dans cette exemple concerne les fenêtres modales ou dialog 👍
+[voir la publication](https://giusmili.github.io/modale-SIO/)
 
 ## Langage utilisés: 
 
